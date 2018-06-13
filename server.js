@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
     res.render('index.html');
 });
 
+app.get('/ping', (req, res) => {
+    res.send('pong');
+});
+
 
 app.listen(5000, () => console.log('Listening on port 5000!'));
 
