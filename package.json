@@ -5,7 +5,7 @@
     "Boilerplate to build a full stack web application using React, Node.js, Express and Webpack.",
   "main": "src/server/index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "build": "webpack --mode production",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon server.js",
