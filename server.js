@@ -2,6 +2,7 @@ const express = require('express');
 const os = require('os');
 const path = require('path');
 const app = express();
+const port = process.env.PORT || 5000
 
 app.use(express.static('dist'));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -16,6 +17,6 @@ app.get('/ping', (req, res) => {
 });
 
 
-app.listen(5000, () => console.log('Listening on port 5000!'));
+app.listen(port, () => console.log('Listening on port 5000!'));
 
 
