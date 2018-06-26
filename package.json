@@ -1,23 +1,27 @@
 {
   "name": "simple-react-full-stack",
   "version": "1.0.0",
-  "description":
-    "Boilerplate to build a full stack web application using React, Node.js, Express and Webpack.",
-  "main": "src/server/index.js",
+  "description": "Boilerplate to build a full stack web application using React, Node.js, Express and Webpack.",
+  "main": "server.js",
   "scripts": {
-  "start": "node server.js",
+    "start": "node server.js",
     "build": "webpack --mode production",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev2": "npm run server",
     "heroku-postbuild": "yarn build"
   },
   "author": "Sandeep Raveesh",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.263.1",
     "express": "^4.16.3",
+    "flickrapi": "^0.6.0",
     "react": "^16.3.1",
-    "react-dom": "^16.3.1"
+    "react-dom": "^16.3.1",
+    "react-materialize": "^2.3.1",
+    "uuid": "^3.2.1"
   },
   "proxy": "http://localhost:5000",
   "devDependencies": {
