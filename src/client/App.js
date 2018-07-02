@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './app.css';
+import {Button, Icon} from 'react-materialize'
 
 export default class App extends Component {
   constructor(props) {
@@ -14,7 +15,9 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        Hello WORLD!!
+        <Button waves='light'>
+          <Icon>thumb_up</Icon>
+       </Button>
       </div>
     );
   }
